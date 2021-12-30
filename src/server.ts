@@ -6,10 +6,10 @@ dotenv.config();
 
 const router = express();
 
-const port = process.env.PORT || 1337;
+const port: string | number = process.env.PORT || 1337;
 
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send("Home");
+  res.send("<h1>Home</h1>");
 });
 
 router.listen(port, () => {
